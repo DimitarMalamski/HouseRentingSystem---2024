@@ -18,7 +18,7 @@ namespace HouseRentingSystem.Controllers
         [HttpGet]
         public async Task<IActionResult> Become()
         {
-            if (await agentService.ExistsById(User.Id()))
+            if (await agentService.ExistsByIdAsync(User.Id()))
             {
                 return BadRequest();
             }
